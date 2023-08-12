@@ -33,7 +33,6 @@ type Story @model @search {
   paragraph: String!
   mentions: [User]
   sharedBy: User
-  updatedBy: User
   updatedOn: DateTime
   sharedOn: DateTime
   tags: [String] @length(max: 5)
