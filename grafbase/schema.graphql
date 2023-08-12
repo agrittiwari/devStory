@@ -31,8 +31,9 @@ type Story @model @search {
   trigger: String # this is just mere a string for now, I'll hook it somehow for v1 and on iteration, I'll make this a Type
   about: String!
   paragraph: String!
-  mentions: [User]
-  sharedBy: User
+  mentions: [User] @relation(name: "mentions")
+  sharedBy: User @relation(name: "sharedBy")
+  updatedBy: User @relation(name: "updatedBy")
   updatedOn: DateTime
   sharedOn: DateTime
   tags: [String] @length(max: 5)
