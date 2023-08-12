@@ -1,0 +1,72 @@
+# Welcome to Grafbase!
+# Define your data models, integrate auth, permission rules, custom resolvers, search, and more with Grafbase.
+
+# Integrate Auth
+# https://grafbase.com/docs/auth
+#
+# schema @auth(providers: [{ type: oidc, issuer: "{{ env.ISSUER_URL }}" }], rules: [{ allow: private }]) {
+#   query: Query
+# }
+
+# Define Data Models
+# https://grafbase.com/docs/database
+# type Post @model @search {
+#   title: String!
+#   slug: String! @unique
+#   content: String
+#   publishedAt: DateTime
+#   comments: [Comment]
+#   likes: Int @default(value: 0)
+#   author: User
+# }
+
+type Comment @model @search {
+  story: Story!
+  body: String!
+  likes: Int @default(value: 0)
+  commentedBy: User
+}
+
+type Story @model @search {
+  trigger: String # this is just mere a string for now, I'll hook it somehow for v1 and on iteration, I'll make this a Type
+  about: String!
+  paragraph: String!
+  mentions: [User]
+  sharedBy: User
+  updatedBy: User
+  updatedOn: DateTime
+  sharedOn: DateTime
+  tags: [String] @length(max: 5)
+}
+
+enum Status {
+  INDIE_NOMAD
+  REMOTE_WORKER
+  FREELANCER
+  COMMUNITY_LEADER
+  CONF_HOST
+  STARTUP
+  LEAD
+  DEV
+}
+
+type User @model @search {
+  username: String
+  email: Email!
+  address: URL
+  city: String
+  lifeStatus: Status
+  comments: [Comment]
+  stories: [Story]
+
+  # Extend models with resolvers
+  # https://grafbase.com/docs/edge-gateway/resolvers
+  # gravatar: URL @resolver(name: "user/gravatar")
+}
+
+# Start your backend
+# https://grafbase.com/docs/cli
+# npx grafbase dev
+
+# Future Scope: Will add a Trigger type, which is basically to say and ask certain situation of devlife.
+# Attach stories and Users to it, add has inverse to it.
