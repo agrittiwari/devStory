@@ -1,8 +1,8 @@
 import { CodegenConfig } from "@graphql-codegen/cli";
 
-const url = process.env.GRAFBASE_API_URL as string;
-const xApiKey = process.env.GRAFBASE_API_KEY as string;
-
+const url = process.env.EXPO_PUBLIC_GRAFBASE_API_URL as string;
+const xApiKey = process.env.EXPO_PUBLIC_GRAFBASE_API_KEY as string;
+console.log("running", url);
 const config: CodegenConfig = {
   schema: [
     {

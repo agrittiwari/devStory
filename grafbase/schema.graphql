@@ -20,6 +20,13 @@
 #   author: User
 # }
 
+type Trigger {
+  aboutWhat: String!
+  by: User
+  stories: [Story]
+  triggeredOn: DateTime
+}
+
 type Comment @model @search {
   story: Story!
   body: String!
@@ -28,7 +35,7 @@ type Comment @model @search {
 }
 
 type Story @model @search {
-  trigger: String # this is just mere a string for now, I'll hook it somehow for v1 and on iteration, I'll make this a Type
+  trigger: Trigger
   about: String!
   paragraph: String!
   mentions: [User] @relation(name: "mentions")
