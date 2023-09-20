@@ -8,6 +8,7 @@ import { useFonts } from "expo-font";
 import { SplashScreen, Stack } from "expo-router";
 import { useEffect } from "react";
 import { useColorScheme } from "react-native";
+import { H1, H2 } from "../components/basic/StyledText";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -51,10 +52,12 @@ function RootLayoutNav() {
 
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+      <H1>This is a H1 tag</H1>
       <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="2tabs" />
         <Stack.Screen name="modal" options={{ presentation: "modal" }} />
       </Stack>
+      <H2>This is a H2 tag</H2>
     </ThemeProvider>
   );
 }
