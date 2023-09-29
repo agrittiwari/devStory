@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "devStory",
-    "slug": "devStory",
+    "slug": "devstory",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -42,6 +42,7 @@
       "eas": {
         "projectId": "beb84b47-8063-4824-8521-a7e7322a3b04"
       }
-    }
+    },
+    "owner": "agrittiwari"
   }
 }
