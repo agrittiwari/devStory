@@ -15,7 +15,6 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    
     "ios": {
       "supportsTablet": true
     },
@@ -35,6 +34,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "beb84b47-8063-4824-8521-a7e7322a3b04"
+      }
     }
   }
 }
