@@ -18,10 +18,10 @@ export {
   ErrorBoundary,
 } from "expo-router";
 
-export const unstable_settings = {
-  // Ensure that reloading on `/modal` keeps a back button present.
-  initialRouteName: "(2tabs)",
-};
+// export const unstable_settings = {
+//   // Ensure that reloading on `/modal` keeps a back button present.
+//   initialRouteName: "(2tabs)",
+// };
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -46,10 +46,10 @@ export default function RootLayout() {
   if (!loaded) {
     return null;
   }
-  if (Platform.OS === "web") {
-    return <RootLayoutNav />;
+  if (Platform.OS === "android") {
+    return <TabLayout />;
   }
-  return <TabLayout />;
+  return <RootLayoutNav />;
 }
 
 function RootLayoutNav() {
@@ -59,7 +59,7 @@ function RootLayoutNav() {
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
       <H1>This is a H1 tag</H1>
       <Stack>
-        <Stack.Screen name="" />
+        <Stack.Screen name="(2tabs)" />
         <Stack.Screen name="modal" options={{ presentation: "modal" }} />
       </Stack>
       <H2>This is a H2 tag</H2>
@@ -77,7 +77,7 @@ function TabLayout() {
       }}
     >
       <Tabs.Screen
-        name="one"
+        name="index"
         options={{
           title: "Triggers",
           tabBarIcon: ({ color }) => <Icon iconName="keyboard" color={color} />,
@@ -104,6 +104,7 @@ function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen name="(stacks)" options={{ href: null }} />
     </Tabs>
   );
 }

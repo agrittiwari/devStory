@@ -2,12 +2,15 @@ import { Pressable, StyleSheet } from "react-native";
 import { H1, H2 } from "../components/basic/StyledText";
 import { View } from "../components/basic/Themed";
 import { Link } from "expo-router";
+import TriggersList from "../components/Composite/Lists/TriggersList";
 
 export default function Page() {
   return (
     <View style={styles.container}>
-      <H2>hello World</H2>
-      <Link href="/2tabs/" asChild>
+      <View style={styles.container}>
+        <TriggersList />
+      </View>
+      <Link href="/two" asChild>
         <Pressable>
           <H1>Press me</H1>
         </Pressable>
