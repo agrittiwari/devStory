@@ -19,7 +19,7 @@ export default function Layout() {
           name="index"
           options={{
             headerLargeTitle: true,
-            title: "Expo Router",
+            title: "Expo Router Stack 1 ",
             headerSearchBarOptions: { placeholder: "Search" },
           }}
         />

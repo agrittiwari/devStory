@@ -17,7 +17,7 @@ const TriggerCard = ({
   triggeredby,
 }: TriggerCardProps) => {
   return (
-    <Link href="/(tabs)/two">
+    <Link href="/(stacks)/login">
       <H1>{trigger}</H1>
       <Divider />
       <Row>
