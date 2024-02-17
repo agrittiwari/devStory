@@ -1,4 +1,5 @@
 import { Pressable, StyleSheet } from "react-native";
+import { useAuth0, Auth0Provider } from "react-native-auth0";
 import { H1, H2 } from "../components/basic/StyledText";
 import { View } from "../components/basic/Themed";
 import { Link } from "expo-router";
@@ -6,11 +7,16 @@ import TriggersList from "../components/Composite/Lists/TriggersList";
 
 export default function Page() {
   return (
-    <View style={styles.container}>
+    <Auth0Provider
+      domain={process.env.EXPO_PUBLIC_AUTH0_DOMAIN || ""}
+      clientId={process.env.EXPO_PUBLIC_AUTH0_CLIENT_ID || ""}
+    >
       <View style={styles.container}>
-        <TriggersList />
+        <View style={styles.container}>
+          <TriggersList />
+        </View>
       </View>
-    </View>
+    </Auth0Provider>
   );
 }
 

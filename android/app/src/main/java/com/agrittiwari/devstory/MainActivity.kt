@@ -1,4 +1,4 @@
-package com.agrittiwari.devstory
+package com.agrittiwari.devStory
 
 import android.os.Build
 import android.os.Bundle

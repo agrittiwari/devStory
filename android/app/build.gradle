@@ -83,9 +83,12 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace 'com.agrittiwari.devstory'
+    namespace 'com.agrittiwari.devStory'
     defaultConfig {
-        applicationId 'com.agrittiwari.devstory'
+// @generated begin react-native-auth0-manifest-placeholder - expo prebuild (DO NOT MODIFY) sync-365acb1e931f72abb3ee613ed845b5f22f027aea
+manifestPlaceholders = [auth0Domain: "dev-r1jw7y2x.us.auth0.com", auth0Scheme: "com.agrittiwari.devStory.auth0"]
+// @generated end react-native-auth0-manifest-placeholder
+        applicationId 'com.agrittiwari.devStory'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

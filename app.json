@@ -1,11 +1,11 @@
 {
   "expo": {
     "name": "devStory",
-    "slug": "devstory",
+    "slug": "devStory",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "devstory",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/splash.png",
@@ -15,14 +15,14 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.agrit.devStory"
+      "bundleIdentifier": "com.agrittiwari.devStory"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.agrittiwari.devstory"
+      "package": "com.agrittiwari.devStory"
     },
     "web": {
       "bundler": "metro",
@@ -31,15 +31,20 @@
     },
     "plugins": [
       "expo-router",
-      "react-native-reanimated/plugin",
       [
         "react-native-vision-camera",
         {
-          "cameraPermissionText": "$(DevStory) needs access to your Camera.",
+          "cameraPermissionText": "$(PRODUCT_NAME) needs access to your Camera.",
 
           // optionally, if you want to record audio:
           "enableMicrophonePermission": true,
-          "microphonePermissionText": "$(DevStory) needs access to your Microphone."
+          "microphonePermissionText": "$(PRODUCT_NAME) needs access to your Microphone."
+        }
+      ],
+      [
+        "react-native-auth0",
+        {
+          "domain": "dev-r1jw7y2x.us.auth0.com"
         }
       ]
     ],

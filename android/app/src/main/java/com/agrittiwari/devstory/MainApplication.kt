@@ -1,4 +1,4 @@
-package com.agrittiwari.devstory
+package com.agrittiwari.devStory
 
 import android.app.Application
 import android.content.res.Configuration
