@@ -10,11 +10,6 @@ export default function Page() {
       <View style={styles.container}>
         <TriggersList />
       </View>
-      <Link href="/two" asChild>
-        <Pressable>
-          <H1>Press me</H1>
-        </Pressable>
-      </Link>
     </View>
   );
 }

@@ -6,12 +6,15 @@ import {
 } from "@react-navigation/native";
 import { useFonts } from "expo-font";
 import { Link, SplashScreen, Stack, Tabs } from "expo-router";
+import { Drawer } from "expo-router/drawer";
+
 import { useEffect } from "react";
 import { Platform, useColorScheme, Pressable } from "react-native";
 import { H1, H2 } from "../components/basic/StyledText";
 // import TabLayout from "./(2tabs)/_layout";
 import Colors from "../constants/Colors";
 import Icon from "../components/basic/Icon";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -55,6 +58,13 @@ export default function RootLayout() {
 function RootLayoutNav() {
   const colorScheme = useColorScheme();
 
+  return (
+    <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <Drawer />
+      </GestureHandlerRootView>
+    </ThemeProvider>
+  );
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
       <H1>This is a H1 tag</H1>
