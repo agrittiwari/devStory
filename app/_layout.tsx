@@ -122,10 +122,10 @@ function TabLayout() {
       />
 
       <Tabs.Screen
-        name="meets"
+        name="community"
         options={{
           headerTitle: "",
-          tabBarLabel: "Meetups & Confs",
+          tabBarLabel: "Community",
           tabBarIcon: ({ color, focused, size }) => (
             <Icon iconName="groups" color={focused ? "white" : "black"} />
           ),
