@@ -49,7 +49,7 @@ export default function RootLayout() {
   if (!loaded) {
     return null;
   }
-  if (Platform.OS === "android") {
+  if (Platform.OS === "android" || Platform.OS === "ios") {
     return <TabLayout />;
   }
   return <RootLayoutNav />;
@@ -65,16 +65,6 @@ function RootLayoutNav() {
       </GestureHandlerRootView>
     </ThemeProvider>
   );
-  return (
-    <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <H1>This is a H1 tag</H1>
-      <Stack>
-        <Stack.Screen name="(2tabs)" />
-        <Stack.Screen name="modal" options={{ presentation: "modal" }} />
-      </Stack>
-      <H2>This is a H2 tag</H2>
-    </ThemeProvider>
-  );
 }
 
 function TabLayout() {
@@ -82,39 +72,80 @@ function TabLayout() {
 
   return (
     <Tabs
+      initialRouteName="/Feed"
       screenOptions={{
         tabBarActiveTintColor: Colors["light"].tint,
+        tabBarActiveBackgroundColor: "black",
+        headerRight: () => (
+          <Link href="/notifications/" asChild>
+            <Pressable>
+              {({ pressed }) => (
+                <Icon
+                  iconName="notifications"
+                  style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
+                />
+              )}
+            </Pressable>
+          </Link>
+        ),
       }}
     >
       <Tabs.Screen
-        name="index"
+        name="feed"
         options={{
-          title: "Triggers",
-          tabBarIcon: ({ color }) => <Icon iconName="keyboard" color={color} />,
-          headerRight: () => (
-            <Link href="/modal" asChild>
-              <Pressable>
-                {({ pressed }) => (
-                  <Icon
-                    iconName="account-circle"
-                    style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
-                  />
-                )}
-              </Pressable>
-            </Link>
+          headerTitle: "",
+          tabBarLabel: "Feed",
+          tabBarIcon: ({ color, focused, size }) => (
+            <Icon iconName="home" color={focused ? "white" : "black"} />
           ),
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="projects"
         options={{
-          title: "React",
-          tabBarIcon: ({ color }) => (
-            <Icon iconName="video-label" color={color} />
+          headerTitle: "",
+          tabBarLabel: "Projects",
+          tabBarIcon: ({ color, focused, size }) => (
+            <Icon iconName="work" color={focused ? "white" : "black"} />
           ),
         }}
       />
-      <Tabs.Screen name="(stacks)" options={{ href: null }} />
+      <Tabs.Screen
+        name="stream"
+        options={{
+          headerTitle: "",
+          tabBarLabel: "Streaming",
+          tabBarIcon: ({ color, focused, size }) => (
+            <Icon iconName="stream" color={focused ? "white" : "black"} />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="meets"
+        options={{
+          headerTitle: "",
+          tabBarLabel: "Meetups & Confs",
+          tabBarIcon: ({ color, focused, size }) => (
+            <Icon iconName="groups" color={focused ? "white" : "black"} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          headerTitle: "",
+          tabBarLabel: "Profile",
+          tabBarIcon: ({ color, focused, size }) => (
+            <Icon
+              iconName="account-circle"
+              color={focused ? "white" : "black"}
+            />
+          ),
+        }}
+      />
+
+      <Tabs.Screen name="notifications" options={{ href: null }} />
     </Tabs>
   );
 }

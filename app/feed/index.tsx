@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 
-const index = () => {
+const Feed = () => {
   return (
     <View>
-      <Text>Thank you! It's a stack</Text>
+      <Text>Feed</Text>
     </View>
   );
 };
 
-export default index;
+export default Feed;
 
 const styles = StyleSheet.create({});
