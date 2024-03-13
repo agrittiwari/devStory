@@ -5,16 +5,23 @@ import {
   ThemeProvider,
 } from "@react-navigation/native";
 import { useFonts } from "expo-font";
-import { Link, SplashScreen, Stack, Tabs } from "expo-router";
+import {
+  Link,
+  SplashScreen,
+  Stack,
+  Tabs,
+  useNavigationContainerRef,
+} from "expo-router";
 import { Drawer } from "expo-router/drawer";
-
-import { useEffect } from "react";
+import * as Sentry from "@sentry/react-native";
+import React, { useEffect } from "react";
 import { Platform, useColorScheme, Pressable } from "react-native";
 import { H1, H2 } from "../components/basic/StyledText";
 // import TabLayout from "./(2tabs)/_layout";
 import Colors from "../constants/Colors";
 import Icon from "../components/basic/Icon";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { config } from "../utils/config";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -26,10 +33,26 @@ export {
 //   initialRouteName: "(2tabs)",
 // };
 
+// Construct a new instrumentation instance. This is needed to communicate between the integration and React
+const routingInstrumentation = new Sentry.ReactNavigationInstrumentation();
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
-export default function RootLayout() {
+Sentry.init({
+  dsn: config.sentryDsn,
+  debug: true, // If `true`, Sentry will try to print out useful debugging information if something goes wrong with sending the event. Set it to `false` in production
+  integrations: [
+    new Sentry.ReactNativeTracing({
+      // Pass instrumentation to be used as `routingInstrumentation`
+      routingInstrumentation,
+      // ...
+    }),
+  ],
+});
+
+function RootLayout() {
+  const ref = useNavigationContainerRef();
+
   const [loaded, error] = useFonts({
     SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
     ...FontAwesome.font,
@@ -37,14 +60,14 @@ export default function RootLayout() {
 
   // Expo Router uses Error Boundaries to catch errors in the navigation tree.
   useEffect(() => {
+    if (ref) {
+      routingInstrumentation.registerNavigationContainer(ref);
+    }
     if (error) throw error;
-  }, [error]);
-
-  useEffect(() => {
     if (loaded) {
       SplashScreen.hideAsync();
     }
-  }, [loaded]);
+  }, [ref, error, loaded]);
 
   if (!loaded) {
     return null;
@@ -149,3 +172,6 @@ function TabLayout() {
     </Tabs>
   );
 }
+
+// Wrap the Root Layout route component with `Sentry.wrap` to capture gesture info and profiling data.
+export default Sentry.wrap(RootLayout);
