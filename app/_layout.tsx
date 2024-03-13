@@ -4,6 +4,7 @@ import {
   DefaultTheme,
   ThemeProvider,
 } from "@react-navigation/native";
+import { PostHogProvider } from "posthog-react-native";
 import { useFonts } from "expo-font";
 import {
   Link,
@@ -73,9 +74,27 @@ function RootLayout() {
     return null;
   }
   if (Platform.OS === "android" || Platform.OS === "ios") {
-    return <TabLayout />;
+    return (
+      <PostHogProvider
+        apiKey={config.postHogApiKey}
+        options={{
+          host: "https://app.posthog.com",
+        }}
+      >
+        <TabLayout />
+      </PostHogProvider>
+    );
   }
-  return <RootLayoutNav />;
+  return (
+    <PostHogProvider
+      apiKey={config.postHogApiKey}
+      options={{
+        host: "https://app.posthog.com",
+      }}
+    >
+      <RootLayoutNav />
+    </PostHogProvider>
+  );
 }
 
 function RootLayoutNav() {
