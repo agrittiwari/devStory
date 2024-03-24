@@ -1,3 +1,5 @@
+import "expo-dev-client";
+
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import {
   DarkTheme,
@@ -23,6 +25,7 @@ import Colors from "../constants/Colors";
 import Icon from "../components/basic/Icon";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { config } from "../utils/config";
+import { Text } from "../components/Themed";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -114,10 +117,11 @@ function TabLayout() {
 
   return (
     <Tabs
-      initialRouteName="/Feed"
+      initialRouteName="/feed"
       screenOptions={{
         tabBarActiveTintColor: Colors["light"].tint,
         tabBarActiveBackgroundColor: "black",
+        tabBarShowLabel: false,
         headerRight: () => (
           <Link href="/notifications/" asChild>
             <Pressable>
@@ -137,8 +141,13 @@ function TabLayout() {
         options={{
           headerTitle: "",
           tabBarLabel: "Feed",
+          tabBarShowLabel: false,
+
           tabBarIcon: ({ color, focused, size }) => (
-            <Icon iconName="home" color={focused ? "white" : "black"} />
+            <>
+              <Icon iconName="home" color={focused ? "white" : "black"} />
+              <Text style={{ color: focused ? "white" : "black" }}>Home</Text>
+            </>
           ),
         }}
       />
@@ -147,8 +156,15 @@ function TabLayout() {
         options={{
           headerTitle: "",
           tabBarLabel: "Projects",
+          tabBarShowLabel: false,
           tabBarIcon: ({ color, focused, size }) => (
-            <Icon iconName="work" color={focused ? "white" : "black"} />
+            <>
+              <Icon iconName="work" color={focused ? "white" : "black"} />
+
+              <Text style={{ color: focused ? "white" : "black" }}>
+                Projects
+              </Text>
+            </>
           ),
         }}
       />
@@ -157,8 +173,13 @@ function TabLayout() {
         options={{
           headerTitle: "",
           tabBarLabel: "Streaming",
+          tabBarShowLabel: false,
+
           tabBarIcon: ({ color, focused, size }) => (
-            <Icon iconName="stream" color={focused ? "white" : "black"} />
+            <>
+              <Icon iconName="stream" color={focused ? "white" : "black"} />
+              <Text style={{ color: focused ? "white" : "black" }}>Stream</Text>
+            </>
           ),
         }}
       />
@@ -167,9 +188,14 @@ function TabLayout() {
         name="community"
         options={{
           headerTitle: "",
-          tabBarLabel: "Community",
+          tabBarShowLabel: false,
           tabBarIcon: ({ color, focused, size }) => (
-            <Icon iconName="groups" color={focused ? "white" : "black"} />
+            <>
+              <Icon iconName="groups" color={focused ? "white" : "black"} />
+              <Text style={{ color: focused ? "white" : "black" }}>
+                Community
+              </Text>
+            </>
           ),
         }}
       />
@@ -177,12 +203,19 @@ function TabLayout() {
         name="profile"
         options={{
           headerTitle: "",
+          tabBarShowLabel: false,
+
           tabBarLabel: "Profile",
           tabBarIcon: ({ color, focused, size }) => (
-            <Icon
-              iconName="account-circle"
-              color={focused ? "white" : "black"}
-            />
+            <>
+              <Icon
+                iconName="account-circle"
+                color={focused ? "white" : "black"}
+              />
+              <Text style={{ color: focused ? "white" : "black" }}>
+                Account
+              </Text>
+            </>
           ),
         }}
       />
