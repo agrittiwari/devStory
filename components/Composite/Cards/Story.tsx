@@ -44,4 +44,8 @@ const styles = StyleSheet.create({
     backgroundColor: "blue",
     position: "absolute",
   },
+  videoContainer: {
+    flex: 1,
+    backgroundColor: "black",
+  },
 });

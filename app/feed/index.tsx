@@ -1,5 +1,5 @@
 import { Text, View } from "react-native";
-import React, { useRef } from "react";
+import { useRef } from "react";
 import FeedList from "../../components/Composite/Lists/FeedList";
 import Story from "../../components/Composite/Cards/Story";
 import { dummyVideos } from "../../constants/dummy_Data";
@@ -17,11 +17,11 @@ const Feed = () => {
   return (
     <View>
       <Text>Home </Text>
-        videoUrl={
-          "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
-        }
+
+      <Story
+        videoUrl={"http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4"}
       />
-      <Video
+      {/*<Video
         // Can be a URL or a local file.
         source={{
           uri: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
