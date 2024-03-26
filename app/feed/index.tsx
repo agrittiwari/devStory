@@ -19,7 +19,10 @@ const Feed = () => {
       <Text>Home </Text>
 
       <Story
-        videoUrl={"http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4"}
+        videoUrl={
+          "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4?_=1"
+        }
+        title="Dummy Data video"
       />
       {/*<Video
         // Can be a URL or a local file.

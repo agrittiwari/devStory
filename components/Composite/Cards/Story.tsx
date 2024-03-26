@@ -38,10 +38,10 @@ export default Story;
 
 const styles = StyleSheet.create({
   backgroundVideo: {
-    height: 200,
+    height: 400,
     width: 200,
+    flex: 1,
 
-    backgroundColor: "blue",
     position: "absolute",
   },
   videoContainer: {
