@@ -8,9 +8,12 @@ const FeedList = () => {
   return (
     <View style={{ backgroundColor: "blue" }}>
       <FlashList
+        contentContainerStyle={{ padding: 10 }}
         style={{ backgroundColor: "pink" }}
         data={dummyVideos}
-        renderItem={({ item, index }) => <Story videoUrl={item?.videoUrl} />}
+        renderItem={({ item, index }) => (
+          <Story key={item?.id} title={item?.title} videoUrl={item?.videoUrl} />
+        )}
         estimatedItemSize={3}
       />
     </View>
