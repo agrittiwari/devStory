@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "devStory",
+    "name": "DevStory",
     "slug": "devStory",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -53,6 +53,12 @@
         }
       ],
       "expo-localization"
+      // [
+      //   "expo-font",
+      //   {
+      //     "fonts": ["./assets/fonts/SpaceMono-Regular.ttf"]
+      //   }
+      // ]
     ],
     "experiments": {
       "typedRoutes": true

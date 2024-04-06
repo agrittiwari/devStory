@@ -17,7 +17,7 @@ import {
 } from "expo-router";
 import { Drawer } from "expo-router/drawer";
 import * as Sentry from "@sentry/react-native";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Platform, useColorScheme, Pressable } from "react-native";
 import { H1, H2 } from "../components/basic/StyledText";
 // import TabLayout from "./(2tabs)/_layout";
