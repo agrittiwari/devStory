@@ -26,6 +26,7 @@ import Icon from "../components/basic/Icon";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { config } from "../utils/config";
 import { Text } from "../components/Themed";
+import useCachedResources from "../utils/useCachedResources";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -44,7 +45,7 @@ SplashScreen.preventAutoHideAsync();
 
 Sentry.init({
   dsn: config.sentryDsn,
-  debug: true, // If `true`, Sentry will try to print out useful debugging information if something goes wrong with sending the event. Set it to `false` in production
+  debug: false, // If `true`, Sentry will try to print out useful debugging information if something goes wrong with sending the event. Set it to `false` in production
   integrations: [
     new Sentry.ReactNativeTracing({
       // Pass instrumentation to be used as `routingInstrumentation`
@@ -57,25 +58,26 @@ Sentry.init({
 function RootLayout() {
   const ref = useNavigationContainerRef();
 
-  const [loaded, error] = useFonts({
-    SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
-    ...FontAwesome.font,
-  });
+  const loaded = useCachedResources();
+  // const [loaded, error] = useFonts({
+  //   SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
+  //   ...FontAwesome.font,
+  // });
 
   // Expo Router uses Error Boundaries to catch errors in the navigation tree.
-  useEffect(() => {
-    if (ref) {
-      routingInstrumentation.registerNavigationContainer(ref);
-    }
-    if (error) throw error;
-    if (loaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [ref, error, loaded]);
+  // useEffect(() => {
+  //   if (ref) {
+  //     routingInstrumentation.registerNavigationContainer(ref);
+  //   }
+  //   if (error) throw error;
+  //   if (loaded) {
+  //     SplashScreen.hideAsync();
+  //   }
+  // }, [ref, error, loaded]);
 
-  if (!loaded) {
-    return null;
-  }
+  // if (!loaded) {
+  //   return null;
+  // }
   if (Platform.OS === "android" || Platform.OS === "ios") {
     return (
       <PostHogProvider
@@ -159,7 +161,10 @@ function TabLayout() {
           tabBarShowLabel: false,
           tabBarIcon: ({ color, focused, size }) => (
             <>
-              <Icon iconName="work" color={focused ? "white" : "black"} />
+              <Icon
+                iconName="code-working"
+                color={focused ? "white" : "black"}
+              />
 
               <Text style={{ color: focused ? "white" : "black" }}>
                 Projects
@@ -191,7 +196,7 @@ function TabLayout() {
           tabBarShowLabel: false,
           tabBarIcon: ({ color, focused, size }) => (
             <>
-              <Icon iconName="groups" color={focused ? "white" : "black"} />
+              <Icon iconName="people" color={focused ? "white" : "black"} />
               <Text style={{ color: focused ? "white" : "black" }}>
                 Community
               </Text>
@@ -209,7 +214,7 @@ function TabLayout() {
           tabBarIcon: ({ color, focused, size }) => (
             <>
               <Icon
-                iconName="account-circle"
+                iconName="people-sharp"
                 color={focused ? "white" : "black"}
               />
               <Text style={{ color: focused ? "white" : "black" }}>

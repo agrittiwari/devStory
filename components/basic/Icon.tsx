@@ -5,11 +5,12 @@ import React from "react";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import { StyleProp, ViewStyle } from "react-native";
 import Layout from "../../constants/Layout";
+import Ionicons from "@expo/vector-icons/Ionicons";
 
 /* NOTE: Helps to auto suggest the icon names of MaterialIcons in the IDE.
   Don't need to create a new type for each icon name separately. Helps to avoid typos.
  */
-export type IconName = React.ComponentProps<typeof MaterialIcons>["name"];
+export type IconName = React.ComponentProps<typeof Ionicons>["name"];
 
 export type IconProps = {
   iconName: IconName;
@@ -29,7 +30,7 @@ export default function Icon({
   onPress,
 }: IconProps) {
   return (
-    <MaterialIcons
+    <Ionicons
       style={style}
       onPress={onPress}
       name={iconName}
