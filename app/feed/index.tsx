@@ -4,6 +4,7 @@ import FeedList from "../../components/Composite/Lists/FeedList";
 import Story from "../../components/Composite/Cards/Story";
 import { dummyVideos } from "../../constants/dummy_Data";
 import Video, { VideoRef } from "react-native-video";
+import Button from "../../components/basic/Button";
 
 const Feed = () => {
   const videoRef = useRef<VideoRef>(null);
@@ -18,12 +19,12 @@ const Feed = () => {
     <View>
       <Text>Home </Text>
 
-      <Story
+      {/* <Story
         videoUrl={
           "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4?_=1"
         }
         title="Dummy Data video"
-      />
+      /> */}
       {/*<Video
         // Can be a URL or a local file.
         source={{

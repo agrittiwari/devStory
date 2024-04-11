@@ -1,5 +1,5 @@
 import "expo-dev-client";
-
+import "../global.css";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import {
   DarkTheme,
