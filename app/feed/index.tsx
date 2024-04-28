@@ -4,7 +4,7 @@ import FeedList from "../../components/Composite/Lists/FeedList";
 import Story from "../../components/Composite/Cards/Story";
 import { dummyVideos } from "../../constants/dummy_Data";
 import Video, { VideoRef } from "react-native-video";
-import Button from "../../components/basic/Button";
+import { Button } from "../../@components/ui/button";
 
 const Feed = () => {
   const videoRef = useRef<VideoRef>(null);
@@ -39,6 +39,7 @@ const Feed = () => {
         style={{ flex: 1 }}
       /> */}
       <FeedList />
+     
     </View>
   );
 };
