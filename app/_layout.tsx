@@ -134,7 +134,7 @@ function TabLayout() {
 
   return (
     <Tabs
-      initialRouteName="/feed"
+      initialRouteName="index"
       screenOptions={{
         tabBarActiveTintColor: Colors["light"].tint,
         tabBarActiveBackgroundColor: "black",
@@ -154,7 +154,7 @@ function TabLayout() {
       }}
     >
       <Tabs.Screen
-        name="feed"
+        name="index"
         options={{
           headerTitle: "",
           tabBarLabel: "Feed",
@@ -241,6 +241,7 @@ function TabLayout() {
       />
 
       <Tabs.Screen name="notifications" options={{ href: null }} />
+      <Tabs.Screen name="[...unmatched]" options={{ href: null }} />
     </Tabs>
   );
 }

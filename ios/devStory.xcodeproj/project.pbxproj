@@ -7,30 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		032DD9AF93FB4B3292190359 /* FreightSansProBook-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B32A1761704F4A1BAFF67978 /* FreightSansProBook-Italic.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1F502605FF09433CBAD35059 /* FreightSansProSemibold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C9A4AA8FEE54285AECAED5B /* FreightSansProSemibold-Italic.ttf */; };
+		2384B70F0B1B4F7F933512C3 /* FreightSansProBlack-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A58AC6A60938477CA507DBCF /* FreightSansProBlack-Regular.ttf */; };
+		328091A4D60B40CD84DAB8DF /* FreightSansProBook-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEA46DAA5FC149E1BF0D8EB5 /* FreightSansProBook-Regular.ttf */; };
+		3764699992AD4711AA4322E2 /* FreightSansProLight-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 432681C27C5243B58BE2D18E /* FreightSansProLight-Italic.ttf */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
 		6F06D574B37443F79204BAC0 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B5AE152E5F4165802E1159 /* noop-file.swift */; };
+		804089F23A1048B592B8BB01 /* FreightSansProBold-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 532655A0B77A4162B3B48EDE /* FreightSansProBold-Regular.ttf */; };
+		8B0F37CC82264619A663B742 /* FreightSansProSemibold-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5667F3A75C184EB0ADE63488 /* FreightSansProSemibold-Regular.ttf */; };
 		96905EF65AED1B983A6B3ABC /* libPods-DevStory.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-DevStory.a */; };
+		9C6872737B544A7183B34ED9 /* FreightSansProLight-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22F66CC82945491AA673B5EF /* FreightSansProLight-Regular.ttf */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
+		B21659EE6A5C4E50BA9C075D /* FreightSansProMedium-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA42F37B47264DF4A571E75E /* FreightSansProMedium-Italic.ttf */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
+		C92CB1B4DF84461AAE0C0CD2 /* FreightSansProBlack-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BECC0BCEE56546BB9A6F9FD9 /* FreightSansProBlack-Italic.ttf */; };
+		ED46120E96684EB98E3BC177 /* FreightSansProBold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39DA3697025E4A58B721F45C /* FreightSansProBold-Italic.ttf */; };
+		FD7E345353C74792AF2BDC35 /* FreightSansProMedium-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 652100E1D655427FB98380F3 /* FreightSansProMedium-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C9A4AA8FEE54285AECAED5B /* FreightSansProSemibold-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "FreightSansProSemibold-Italic.ttf"; path = "../assets/fonts/FreightSansProSemibold-Italic.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* DevStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = DevStory/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = DevStory/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = DevStory/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = DevStory/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = DevStory/main.m; sourceTree = "<group>"; };
+		22F66CC82945491AA673B5EF /* FreightSansProLight-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "FreightSansProLight-Regular.ttf"; path = "../assets/fonts/FreightSansProLight-Regular.ttf"; sourceTree = "<group>"; };
+		39DA3697025E4A58B721F45C /* FreightSansProBold-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "FreightSansProBold-Italic.ttf"; path = "../assets/fonts/FreightSansProBold-Italic.ttf"; sourceTree = "<group>"; };
+		432681C27C5243B58BE2D18E /* FreightSansProLight-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "FreightSansProLight-Italic.ttf"; path = "../assets/fonts/FreightSansProLight-Italic.ttf"; sourceTree = "<group>"; };
+		532655A0B77A4162B3B48EDE /* FreightSansProBold-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "FreightSansProBold-Regular.ttf"; path = "../assets/fonts/FreightSansProBold-Regular.ttf"; sourceTree = "<group>"; };
+		5667F3A75C184EB0ADE63488 /* FreightSansProSemibold-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "FreightSansProSemibold-Regular.ttf"; path = "../assets/fonts/FreightSansProSemibold-Regular.ttf"; sourceTree = "<group>"; };
 		58EEBF8E8E6FB1BC6CAF49B5 /* libPods-DevStory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DevStory.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		652100E1D655427FB98380F3 /* FreightSansProMedium-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "FreightSansProMedium-Regular.ttf"; path = "../assets/fonts/FreightSansProMedium-Regular.ttf"; sourceTree = "<group>"; };
 		6C2E3173556A471DD304B334 /* Pods-DevStory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevStory.debug.xcconfig"; path = "Target Support Files/Pods-DevStory/Pods-DevStory.debug.xcconfig"; sourceTree = "<group>"; };
 		72B5AE152E5F4165802E1159 /* noop-file.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "noop-file.swift"; path = "DevStory/noop-file.swift"; sourceTree = "<group>"; };
 		7A4D352CD337FB3A3BF06240 /* Pods-DevStory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevStory.release.xcconfig"; path = "Target Support Files/Pods-DevStory/Pods-DevStory.release.xcconfig"; sourceTree = "<group>"; };
 		8280F888FC454CBE90F2289D /* DevStory-Bridging-Header.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "DevStory-Bridging-Header.h"; path = "DevStory/DevStory-Bridging-Header.h"; sourceTree = "<group>"; };
+		A58AC6A60938477CA507DBCF /* FreightSansProBlack-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "FreightSansProBlack-Regular.ttf"; path = "../assets/fonts/FreightSansProBlack-Regular.ttf"; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = DevStory/SplashScreen.storyboard; sourceTree = "<group>"; };
+		B32A1761704F4A1BAFF67978 /* FreightSansProBook-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "FreightSansProBook-Italic.ttf"; path = "../assets/fonts/FreightSansProBook-Italic.ttf"; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
+		BECC0BCEE56546BB9A6F9FD9 /* FreightSansProBlack-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "FreightSansProBlack-Italic.ttf"; path = "../assets/fonts/FreightSansProBlack-Italic.ttf"; sourceTree = "<group>"; };
+		DA42F37B47264DF4A571E75E /* FreightSansProMedium-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "FreightSansProMedium-Italic.ttf"; path = "../assets/fonts/FreightSansProMedium-Italic.ttf"; sourceTree = "<group>"; };
+		DEA46DAA5FC149E1BF0D8EB5 /* FreightSansProBook-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "FreightSansProBook-Regular.ttf"; path = "../assets/fonts/FreightSansProBook-Regular.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-DevStory/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +96,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		421468A7C7F0415FB9EBB2BD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BECC0BCEE56546BB9A6F9FD9 /* FreightSansProBlack-Italic.ttf */,
+				A58AC6A60938477CA507DBCF /* FreightSansProBlack-Regular.ttf */,
+				39DA3697025E4A58B721F45C /* FreightSansProBold-Italic.ttf */,
+				532655A0B77A4162B3B48EDE /* FreightSansProBold-Regular.ttf */,
+				B32A1761704F4A1BAFF67978 /* FreightSansProBook-Italic.ttf */,
+				DEA46DAA5FC149E1BF0D8EB5 /* FreightSansProBook-Regular.ttf */,
+				432681C27C5243B58BE2D18E /* FreightSansProLight-Italic.ttf */,
+				22F66CC82945491AA673B5EF /* FreightSansProLight-Regular.ttf */,
+				DA42F37B47264DF4A571E75E /* FreightSansProMedium-Italic.ttf */,
+				652100E1D655427FB98380F3 /* FreightSansProMedium-Regular.ttf */,
+				0C9A4AA8FEE54285AECAED5B /* FreightSansProSemibold-Italic.ttf */,
+				5667F3A75C184EB0ADE63488 /* FreightSansProSemibold-Regular.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +132,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				D65327D7A22EEC0BE12398D9 /* Pods */,
 				D7E4C46ADA2E9064B798F356 /* ExpoModulesProviders */,
+				421468A7C7F0415FB9EBB2BD /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -203,6 +248,18 @@
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
+				C92CB1B4DF84461AAE0C0CD2 /* FreightSansProBlack-Italic.ttf in Resources */,
+				2384B70F0B1B4F7F933512C3 /* FreightSansProBlack-Regular.ttf in Resources */,
+				ED46120E96684EB98E3BC177 /* FreightSansProBold-Italic.ttf in Resources */,
+				804089F23A1048B592B8BB01 /* FreightSansProBold-Regular.ttf in Resources */,
+				032DD9AF93FB4B3292190359 /* FreightSansProBook-Italic.ttf in Resources */,
+				328091A4D60B40CD84DAB8DF /* FreightSansProBook-Regular.ttf in Resources */,
+				3764699992AD4711AA4322E2 /* FreightSansProLight-Italic.ttf in Resources */,
+				9C6872737B544A7183B34ED9 /* FreightSansProLight-Regular.ttf in Resources */,
+				B21659EE6A5C4E50BA9C075D /* FreightSansProMedium-Italic.ttf in Resources */,
+				FD7E345353C74792AF2BDC35 /* FreightSansProMedium-Regular.ttf in Resources */,
+				1F502605FF09433CBAD35059 /* FreightSansProSemibold-Italic.ttf in Resources */,
+				8B0F37CC82264619A663B742 /* FreightSansProSemibold-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,8 +350,6 @@
 				"${PODS_CONFIGURATION_BUILD_DIR}/ExpoFileSystem/ExpoFileSystem_privacy.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/ExpoLocalization/ExpoLocalization_privacy.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/ExpoSystemUI/ExpoSystemUI_privacy.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/PromisesObjC/FBLPromises_Privacy.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/PromisesSwift/Promises_Privacy.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/RCTI18nStrings.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/Sentry/Sentry.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/expo-dev-launcher/EXDevLauncher.bundle",
@@ -309,8 +364,6 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoFileSystem_privacy.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoLocalization_privacy.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoSystemUI_privacy.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FBLPromises_Privacy.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Promises_Privacy.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RCTI18nStrings.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Sentry.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EXDevLauncher.bundle",
@@ -487,7 +540,10 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_CPLUSPLUSFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -544,7 +600,10 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_CPLUSPLUSFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;

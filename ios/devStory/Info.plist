@@ -65,6 +65,22 @@
     <array>
       <string>$(PRODUCT_BUNDLE_IDENTIFIER).expo.index_route</string>
       <string>$(PRODUCT_BUNDLE_IDENTIFIER).expo.index_route</string>
+      <string>$(PRODUCT_BUNDLE_IDENTIFIER).expo.index_route</string>
+    </array>
+    <key>UIAppFonts</key>
+    <array>
+      <string>FreightSansProBlack-Italic.ttf</string>
+      <string>FreightSansProBlack-Regular.ttf</string>
+      <string>FreightSansProBold-Italic.ttf</string>
+      <string>FreightSansProBold-Regular.ttf</string>
+      <string>FreightSansProBook-Italic.ttf</string>
+      <string>FreightSansProBook-Regular.ttf</string>
+      <string>FreightSansProLight-Italic.ttf</string>
+      <string>FreightSansProLight-Regular.ttf</string>
+      <string>FreightSansProMedium-Italic.ttf</string>
+      <string>FreightSansProMedium-Regular.ttf</string>
+      <string>FreightSansProSemibold-Italic.ttf</string>
+      <string>FreightSansProSemibold-Regular.ttf</string>
     </array>
     <key>UILaunchStoryboardName</key>
     <string>SplashScreen</string>

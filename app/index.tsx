@@ -1,10 +1,7 @@
-import { Text, View } from "react-native";
 import { useRef } from "react";
-import FeedList from "../../components/Composite/Lists/FeedList";
-import Story from "../../components/Composite/Cards/Story";
-import { dummyVideos } from "../../constants/dummy_Data";
-import Video, { VideoRef } from "react-native-video";
-import { Button } from "../../@components/ui/button";
+import { Text, View } from "react-native";
+import { VideoRef } from "react-native-video";
+import FeedList from "../components/Composite/Lists/FeedList";
 
 const Feed = () => {
   const videoRef = useRef<VideoRef>(null);
@@ -39,7 +36,6 @@ const Feed = () => {
         style={{ flex: 1 }}
       /> */}
       <FeedList />
-     
     </View>
   );
 };

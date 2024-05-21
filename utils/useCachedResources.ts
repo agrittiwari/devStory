@@ -16,10 +16,7 @@ export default function useCachedResources() {
   const [isLoadingComplete, setLoadingComplete] = useState(false);
   // load fonts
   const [fontsLoaded] = Font.useFonts({
-    Inter_400Regular,
-    Inter_500Medium,
-    Inter_600SemiBold,
-    Inter_700Bold,
+    "Freight-regular": require("../assets/fonts/FreightSansProBlack-Italic.ttf"),
   });
   // Load any resources or data that we need prior to rendering the app
   useEffect(() => {
