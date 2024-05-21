@@ -1,6 +1,7 @@
 import "expo-dev-client";
 import "../global.css";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
+import Feather from "@expo/vector-icons/build/Feather";
 import {
   DarkTheme,
   DefaultTheme,
@@ -14,10 +15,12 @@ import {
   Stack,
   Tabs,
   useNavigationContainerRef,
+  usePathname,
+  useRouter,
 } from "expo-router";
 import { Drawer } from "expo-router/drawer";
 import * as Sentry from "@sentry/react-native";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Platform, useColorScheme, Pressable } from "react-native";
 import { H1, H2 } from "../components/basic/StyledText";
 // import TabLayout from "./(2tabs)/_layout";
@@ -27,6 +30,8 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { config } from "../utils/config";
 import { Text } from "../components/Themed";
 import useCachedResources from "../utils/useCachedResources";
+import { setBackgroundColorAsync } from "expo-system-ui";
+import { theme } from "../theme";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -55,10 +60,20 @@ Sentry.init({
   ],
 });
 
-function RootLayout() {
+function Layout() {
   const ref = useNavigationContainerRef();
 
   const loaded = useCachedResources();
+  const [splashVisible, setSplashVisible] = useState(true);
+  const router = useRouter();
+  const pathName = usePathname();
+  const colorScheme = useColorScheme() || "light";
+  useEffect(() => {
+    setBackgroundColorAsync(
+      colorScheme === "dark" ? theme.colorDarkestBlue : theme.colorWhite
+    );
+  }, [colorScheme]);
+
   // const [loaded, error] = useFonts({
   //   SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
   //   ...FontAwesome.font,
@@ -97,12 +112,12 @@ function RootLayout() {
         host: "https://app.posthog.com",
       }}
     >
-      <RootLayoutNav />
+      <WebLayout />
     </PostHogProvider>
   );
 }
 
-function RootLayoutNav() {
+function WebLayout() {
   const colorScheme = useColorScheme();
 
   return (
@@ -182,7 +197,7 @@ function TabLayout() {
 
           tabBarIcon: ({ color, focused, size }) => (
             <>
-              <Icon iconName="stream" color={focused ? "white" : "black"} />
+              <Feather size={24} name="calendar" color={color} />
               <Text style={{ color: focused ? "white" : "black" }}>Stream</Text>
             </>
           ),
@@ -231,4 +246,4 @@ function TabLayout() {
 }
 
 // Wrap the Root Layout route component with `Sentry.wrap` to capture gesture info and profiling data.
-export default Sentry.wrap(RootLayout);
+export default Sentry.wrap(Layout);
