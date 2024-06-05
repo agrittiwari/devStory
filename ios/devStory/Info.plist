@@ -64,11 +64,10 @@
     <key>NSUserActivityTypes</key>
     <array>
       <string>$(PRODUCT_BUNDLE_IDENTIFIER).expo.index_route</string>
-      <string>$(PRODUCT_BUNDLE_IDENTIFIER).expo.index_route</string>
-      <string>$(PRODUCT_BUNDLE_IDENTIFIER).expo.index_route</string>
     </array>
     <key>UIAppFonts</key>
     <array>
+      <string>Ionicons.ttf</string>
       <string>FreightSansProBlack-Italic.ttf</string>
       <string>FreightSansProBlack-Regular.ttf</string>
       <string>FreightSansProBold-Italic.ttf</string>

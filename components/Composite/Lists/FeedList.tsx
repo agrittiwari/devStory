@@ -1,5 +1,4 @@
 import { StyleSheet, Text, View } from "react-native";
-import React from "react";
 import { FlashList } from "@shopify/flash-list";
 import { dummyVideos } from "../../../constants/dummy_Data";
 import Story from "../Cards/Story";
@@ -9,8 +8,8 @@ const FeedList = () => {
   return (
     <View style={{ backgroundColor: "blue", height: Layout.window.height }}>
       <FlashList
+        ti
         contentContainerStyle={{ padding: 10 }}
-        style={{ backgroundColor: "yellow" }}
         data={dummyVideos}
         renderItem={({ item, index }) => (
           <Story key={item?.id} title={item?.title} videoUrl={item?.videoUrl} />

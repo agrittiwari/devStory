@@ -36,6 +36,7 @@ export default {
         "expo-font",
         {
           fonts: [
+            "./assets/fonts/Ionicons.ttf",
             "./assets/fonts/FreightSansProBlack-Italic.ttf",
             "./assets/fonts/FreightSansProBlack-Regular.ttf",
             "./assets/fonts/FreightSansProBold-Italic.ttf",
@@ -74,7 +75,6 @@ export default {
         },
       ],
       "expo-localization",
-      "expo-font",
     ],
     experiments: {
       typedRoutes: true,
